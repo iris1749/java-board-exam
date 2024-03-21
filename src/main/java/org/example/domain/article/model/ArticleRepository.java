@@ -1,4 +1,4 @@
-package org.example.domain;
+package org.example.domain.article.model;
 
 import org.example.base.CommonUtil;
 
@@ -61,6 +61,8 @@ public class ArticleRepository {
         return articleList;
     }
 
+
+    // 게시물 저장
     public Article saveArticle(String title, String body) {
 
         Article article = new Article(latestArticleId, title, body, 0, commonUtil.getCurrentDateTime());

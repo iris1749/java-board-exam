@@ -1,16 +1,20 @@
-package org.example.domain;
+package org.example.domain.article.controller;
 
 import org.example.base.CommonUtil;
+import org.example.domain.article.model.Article;
+import org.example.domain.article.model.ArticleMySQLRepository;
+import org.example.domain.article.model.Repository;
+import org.example.domain.article.view.ArticleView;
 
 import java.util.ArrayList;
 import java.util.Scanner;
 
 // Model - Controller - View
-public class ArticleController { // Model + Controller
+public class ArticleTestController { // Model + Controller
 
     CommonUtil commonUtil = new CommonUtil();
     ArticleView articleView = new ArticleView();
-    ArticleRepository articleRepository = new ArticleRepository();
+    Repository articleRepository = new ArticleMySQLRepository(); // 메모리 DB, File DB
 
     Scanner scan = commonUtil.getScanner();
     int WRONG_VALUE = -1;
